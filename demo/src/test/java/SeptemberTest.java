@@ -3,6 +3,8 @@ import org.junit.Test;
 
 import com.daily_coding_problem.coding_problems.September26;
 import com.daily_coding_problem.coding_problems.September27;
+import com.daily_coding_problem.coding_problems.september_28.Node;
+import com.daily_coding_problem.coding_problems.september_28.September28;
 
 public class SeptemberTest {
     @Test
@@ -31,6 +33,13 @@ public class SeptemberTest {
         result = september27.productOfAllNumbersExceptIndex(list);
         Assert.assertArrayEquals(expectedResult , result);
         
+    }
+
+    @Test
+    public void Sep28TestSerializeDeserialize() {
+        September28 september28 = new September28();
+        Node node = new Node("root", new Node("left", new Node("left.left")), new Node("right"));
+        Assert.assertEquals("left.left", september28.deserialize(september28.serializeString(node)).left.left.val);
     }
     
 }
