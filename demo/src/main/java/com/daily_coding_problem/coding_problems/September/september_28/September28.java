@@ -1,4 +1,4 @@
-package com.daily_coding_problem.coding_problems.september_28;
+package com.daily_coding_problem.coding_problems.September.september_28;
 /*
  * This problem was asked by Google.
  * Given the root to a binary tree, implement 

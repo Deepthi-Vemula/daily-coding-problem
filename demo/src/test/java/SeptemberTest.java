@@ -1,10 +1,12 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.daily_coding_problem.coding_problems.September26;
-import com.daily_coding_problem.coding_problems.September27;
-import com.daily_coding_problem.coding_problems.september_28.Node;
-import com.daily_coding_problem.coding_problems.september_28.September28;
+import com.daily_coding_problem.coding_problems.September.September26;
+import com.daily_coding_problem.coding_problems.September.September27;
+import com.daily_coding_problem.coding_problems.September.September29;
+import com.daily_coding_problem.coding_problems.September.September30;
+import com.daily_coding_problem.coding_problems.September.september_28.Node;
+import com.daily_coding_problem.coding_problems.September.september_28.September28;
 
 public class SeptemberTest {
     @Test
@@ -40,6 +42,26 @@ public class SeptemberTest {
         September28 september28 = new September28();
         Node node = new Node("root", new Node("left", new Node("left.left")), new Node("right"));
         Assert.assertEquals("left.left", september28.deserialize(september28.serializeString(node)).left.left.val);
+    }
+
+    @Test
+    public void Sep29TestGetMinpositiveMissingNumber() {
+        September29 september29 = new September29();
+        int[] list = {3, 4, -1, 1};
+        Assert.assertEquals(2, september29.getMinpositiveMissingNumber(list));
+        list = new int[]{1, 2, 0};
+        Assert.assertEquals(3, september29.getMinpositiveMissingNumber(list));
+        list = new int[]{1, 2, 3, 4, 5, 6};
+        Assert.assertEquals(7, september29.getMinpositiveMissingNumber(list));  
+        list = new int[]{60, 8, 56, 1, 3, -1, -1, 3, -4, 4, 8, 10, 4, 5, 6, 7, 2, 2};
+        Assert.assertEquals(9, september29.getMinpositiveMissingNumber(list));
+    }
+
+    @Test
+    public void Sep30TestCons() {
+        September30 september30 = new September30();
+        Assert.assertEquals(3, september30.car(september30.cons(3, 4)));
+        Assert.assertEquals(4, september30.cdr(september30.cons(3, 4)));
     }
     
 }

@@ -1,4 +1,4 @@
-package com.daily_coding_problem.coding_problems.september_28;
+package com.daily_coding_problem.coding_problems.September.september_28;
 
 import java.util.LinkedList;
 import java.util.Queue;
