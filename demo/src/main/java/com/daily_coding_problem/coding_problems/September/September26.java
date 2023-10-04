@@ -1,4 +1,4 @@
-package com.daily_coding_problem.coding_problems;
+package com.daily_coding_problem.coding_problems.September;
 
 import java.util.Arrays;
 
